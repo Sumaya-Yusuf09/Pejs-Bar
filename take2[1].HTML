@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pejs Bar Menu</title>
+    <link rel="stylesheet" type="text/css" href="take2.CSS">
+</head>
+<body>
+    <h1>Pejs Bar</h1>
+    <h2>Snacks Menu</h2>
+    <select id="snack-menu" onchange="showCustomSnackInput()">
+        <option value="None">Select Snack</option>
+        <option value="Popcorn">Popcorn - $3.99 (200g)</option>
+        <option value="Churros">Churros - $4.49 (150g)</option>
+        <option value="Walnuts">Walnuts - $5.99 (100g)</option>
+        <option value="Chips">Chips - $2.99 (100g)</option>
+        <option value="Other">Other</option>
+    </select>
+    <div id="custom-snack" style="display: none;">
+        <input type="text" id="custom-snack-name" placeholder="Custom Snack Name">
+        <input type="number" id="custom-snack-price" placeholder="Price">
+        <input type="text" id="custom-snack-weight" placeholder="Weight">
+    </div>
+    <br>
+    <h2>Drink Menu</h2>
+    <select id="drink-menu" onchange="showCustomDrinkInput()">
+        <option value="None">Select Drink</option>
+        <option value="Whisky">Whisky - $8.99 (50ml)</option>
+        <option value="Beer">Beer - $5.99 (330ml)</option>
+        <option value="Apple Juice">Apple Juice - $3.49 (300ml)</option>
+        <option value="Orange Juice">Orange Juice - $3.99 (250ml)</option>
+        <option value="Chai Latte">Chai Latte - $4.49 (350ml)</option>
+        <option value="Green Tea">Green Tea - $2.99 (200ml)</option>
+        <option value="Cappuccino">Cappuccino - $3.99 (200ml)</option>
+        <option value="Coffee Latte">Coffee Latte - $4.49 (250ml)</option>
+        <option value="Coca Cola">Coca Cola - $1.99 (500ml)</option>
+        <option value="Fanta">Fanta - $2.49 (500ml)</option>
+        <option value="Other">Other</option>
+    </select>
+    <div id="custom-drink" style="display: none;">
+        <input type="text" id="custom-drink-name" placeholder="Custom Drink Name">
+        <input type="number" id="custom-drink-price" placeholder="Price">
+        <input type="text" id="custom-drink-volume" placeholder="Volume">
+    </div>
+    <br>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" min="1" value="1">
+    <br>
+    <button onclick="placeOrder()">Place Order</button>
+    <div id="order-details"></div>
+    <div id="total"></div>
+    
+    <label for="delivery">Delivery:</label>
+<select id="delivery">
+    <option value="pick-up">Pick-up</option>
+    <option value="home-delivery">Home Delivery</option>
+</select>
+
+
+    <button onclick="printReceipt()">Print Receipt</button>
+    <div id="receipt"></div>
+    <script src="take2.js"></script>
+</body>
+</html>

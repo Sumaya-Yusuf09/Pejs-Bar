@@ -1,0 +1,53 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #ffffff;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #2b00ff;
+}
+
+select, input[type="text"], input[type="number"], button {
+    margin: 15px;
+    padding: 8px;
+    border: 1px solid #2b00ff;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #ffffff;
+    color: #2b00ff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#custom-snack, #custom-drink {
+    display: flex;
+    flex-direction: column;
+}
+
+#order-details, #total, #receipt {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+#receipt {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.receipt-item {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    background-color: #f1f3f5;
+}
